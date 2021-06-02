@@ -168,12 +168,12 @@ def generate_r_index(files: List[str], output: TextIO = stdout) -> None:
     words: List[str] = []
     r_index: Dict[str, Set[str]] = {}
 
-    for arg in files:
-        with open(arg, "r") as file:
+    for file_name in files:
+        with open(file_name, "r") as file:
             tokens: List[str] = preproccess(file)
             words.extend(tokens)
             for word in tokens:
-                r_index.setdefault(word, set()).add(arg)
+                r_index.setdefault(word, set()).add(file_name)
 
     print_r_index(filter_r_index(r_index, words, 500), output)
 
