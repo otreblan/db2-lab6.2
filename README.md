@@ -52,3 +52,5 @@ def generate_r_index(files: List[str], output: TextIO = stdout) -> None:
 
 ### `./r-index.py`
 El índice invertido es leido desde `r_index,txt`.
+
+https://user-images.githubusercontent.com/39320840/120489570-5b003280-c37d-11eb-9cd1-7f08d516d83d.mp4
